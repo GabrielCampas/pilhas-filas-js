@@ -1,4 +1,4 @@
-import MinhaPilha from "../pilha.js";
+import MinhaPilha from "../../pilha.js";
 
 // -- Incompleto --
 

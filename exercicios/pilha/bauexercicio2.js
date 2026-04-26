@@ -1,5 +1,3 @@
-// revisar funcao olhar e verificar
-
 export default class Bau {
     #items = [];
     #quantitade = 0;
@@ -19,15 +17,15 @@ export default class Bau {
             return "\nNão há tesouros no baú.";
         }
 
-        // tirando último tesouro adicionado
-        const ultimoTesouro = this.#items[this.#quantitade - 1];
+        // pega o item do topo
+        const tesouroRemovido = this.#items[this.#quantitade - 1];
 
-        // removendo o ultimo item e diminuindo contador
-        this.#items[this.#quantitade - 1] = undefined;
+        // remove o item do topo do array
+        this.#items.pop();
+
+        // atualiza a quantidade de itens
         this.#quantitade--;
-        
-        // retornando apenas o item da última posição
-        return `Barbarruiva retirou ${this.#items[this.#quantitade - 2]}`
+        return `Barbarruiva retirou: ${tesouroRemovido}.`;
     }
 
     // olhando itens no bau sem pegar
